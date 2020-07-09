@@ -15,7 +15,11 @@ import {
 import {createStackNavigator} from '@react-navigation/stack';
 
 import {NavigationContainer} from '@react-navigation/native';
-import { TextInput } from 'react-native-gesture-handler';
+import { TextInput, State } from 'react-native-gesture-handler';
+import { createStore } from 'redux';
+import {Provider} from 'react-redux';
+
+import CounterApp from './CounterApp';
 
 // function HomeScreen (props) {
 //   console.log('Here Prossss..... : ', props);
@@ -78,18 +82,41 @@ function CreatePostScreen ({navigation, route}) {
   )
 }
 
-const App = () => {
-  const Stack = createStackNavigator();
-  return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-      <Stack.Screen name="Home" component= {HomeScreen} />
-      <Stack.Screen name="Profile" component = {ProfileScreen} options={{title: "Test Name"}}/>
-      <Stack.Screen name="CreatePost" component = {CreatePostScreen} />
-    </Stack.Navigator>
-    </NavigationContainer>
-  );
-};
+// const App = () => {
+//   const Stack = createStackNavigator();
+//   return (
+//     <NavigationContainer>
+//       <Stack.Navigator initialRouteName="Home">
+//       <Stack.Screen name="Home" component= {HomeScreen} />
+//       <Stack.Screen name="Profile" component = {ProfileScreen} options={{title: "Test Name"}}/>
+//       <Stack.Screen name="CreatePost" component = {CreatePostScreen} />
+//     </Stack.Navigator>
+//     </NavigationContainer>
+//   );
+// };
+
+const initialState = {
+  counter : 10
+}
+
+const reducer = (state = initialState, action) => {
+  const {type} = action;
+  switch(type) {
+    case 'INCREASE_COUNTER':
+      return {counter: state.counter + 1}
+      case 'DECREASE_COUNTER':
+        return {counter: state.counter - 1}
+  }
+  return state;
+}
+const store = createStore(reducer);
+function App () {
+  return(
+    <Provider store={store}>
+    <CounterApp />
+    </Provider>
+  )
+}
 
 
 export default App;
