@@ -10,7 +10,7 @@ function CustomHeader(props) {
 
             <Left>
                 {props.leftIcon &&
-                    <Button transparent >
+                    <Button transparent onPress={props.onPress}>
                         <Icon name={props.leftIcon} style={styles.icon} />
                     </Button>
                 }
