@@ -4,9 +4,14 @@ import { Text } from 'native-base';
 import styles from './styles';
 import InputField from '../../components/InputField';
 import CustomButton from '../../components/CustomButton'
+import UserService from '../../services/UserService';
 
-function onPressLoginButton (navigation) {
-  navigation.navigate('Dashboard');
+
+async function onPressLoginButton (navigation) {
+  // navigation.navigate('Dashboard');
+  let data = await UserService.doLogin('hamza3', 'hamza3');
+  console.log('Data???? : ', data);
+  
 }
 
 function Login({navigation}) {
