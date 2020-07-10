@@ -13,7 +13,7 @@ function Splash ({navigation}) {
 
     return(
         <View style={styles.container}> 
-            <Text> Splah hereeeeeeiei eie </Text>
+            <Text> Splash Screen </Text>
         </View>
     )
 }

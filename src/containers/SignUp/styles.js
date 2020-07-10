@@ -11,13 +11,6 @@ const styles = StyleSheet.create({
         backgroundColor: colors.Green,
         width: '80%',
         marginTop: 15
-    },
-    signupTextContainer:{
-        flexDirection: 'row',
-        marginTop: 8
-    },
-    signupText: {
-        color: colors.Blue
     }
 })
 

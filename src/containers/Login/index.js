@@ -1,13 +1,13 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, TouchableOpacity } from 'react-native';
+import { Text } from 'native-base';
 import styles from './styles';
 import InputField from '../../components/InputField';
-// import { Button, Text } from 'native-base';
 import CustomButton from '../../components/CustomButton'
 
 
 
-function Login() {
+function Login({navigation}) {
 
   return (
     <View style={styles.container}>
@@ -25,6 +25,15 @@ function Login() {
           text={"Login"}
           style={styles.customButton}
           />
+
+          <View style={styles.signupTextContainer}>
+          <Text>Don't have account? </Text>
+          <TouchableOpacity
+          onPress={() => navigation.navigate('SignUp')}
+          >
+          <Text style={styles.signupText}>SignUp</Text>
+          </TouchableOpacity>
+          </View>
     </View>
   )
 }

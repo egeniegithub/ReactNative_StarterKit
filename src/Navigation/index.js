@@ -5,6 +5,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Splash from "../containers/Splash";
 import Login from "../containers/Login";
 import Dashboard from "../containers/Dashboard";
+import SignUp from "../containers/SignUp";
 
 function Navigation () {
     const Stack = createStackNavigator();
@@ -13,6 +14,7 @@ function Navigation () {
             <Stack.Navigator initialRouteName="Splash" screenOptions={{headerShown: false}}>
                 <Stack.Screen name="Splah" component={Splash} />
                 <Stack.Screen name="Login" component={Login} />
+                <Stack.Screen name="SignUp" component={SignUp} />
                 <Stack.Screen name="Dashboard" component={Dashboard} />
             </Stack.Navigator>
         </NavigationContainer>
