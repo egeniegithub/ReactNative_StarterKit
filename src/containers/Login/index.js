@@ -1,15 +1,49 @@
-import React from 'react';
-import {View, Text} from 'react-native';
-import styles from './styles';
+// import React from 'react';
+// import {View, Text} from 'react-native';
+// import styles from './styles';
 
 
-function Login () {
+// function Login () {
 
-    return(
-        <View style={styles.container}> 
-            <Text> this is Here New Screen</Text>
-        </View>
-    )
+//     return(
+//         <View style={styles.container}> 
+//             <Text> this is Here New Screen</Text>
+//         </View>
+//     )
+// }
+// export default Login;
+
+import React, { Component } from 'react';
+import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Text } from 'native-base';
+export default class AnatomyExample extends Component {
+  render() {
+    return (
+      <Container>
+        <Header>
+          <Left>
+            <Button transparent>
+              <Icon name='menu' />
+            </Button>
+          </Left>
+          <Body>
+            <Title>Header</Title>
+          </Body>
+          <Right />
+        </Header>
+        <Content>
+          <Text>
+            This is Content Section
+          </Text>
+        </Content>
+        <Footer>
+          <FooterTab>
+            <Button full>
+              <Text>Footer</Text>
+            </Button>
+          </FooterTab>
+        </Footer>
+      </Container>
+    );
+  }
 }
 
-export default Login;
