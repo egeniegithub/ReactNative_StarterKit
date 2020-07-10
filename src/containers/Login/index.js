@@ -5,7 +5,9 @@ import styles from './styles';
 import InputField from '../../components/InputField';
 import CustomButton from '../../components/CustomButton'
 
-
+function onPressLoginButton (navigation) {
+  navigation.navigate('Dashboard')
+}
 
 function Login({navigation}) {
 
@@ -24,6 +26,7 @@ function Login({navigation}) {
         <CustomButton 
           text={"Login"}
           style={styles.customButton}
+          onPressLoginButton = {() => onPressLoginButton(navigation)}
           />
 
           <View style={styles.signupTextContainer}>

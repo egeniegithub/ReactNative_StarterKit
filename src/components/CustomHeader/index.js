@@ -4,7 +4,10 @@ import styles from './styles';
 
 function CustomHeader(props) {
     return (
-        <Header style={styles.header}>
+        <Header
+            style={styles.header}
+            iosBarStyle={'light-content'}>
+
             <Left>
                 {props.leftIcon &&
                     <Button transparent >
