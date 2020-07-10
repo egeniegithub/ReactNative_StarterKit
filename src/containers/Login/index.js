@@ -1,49 +1,31 @@
-// import React from 'react';
-// import {View, Text} from 'react-native';
-// import styles from './styles';
+import React from 'react';
+import { View } from 'react-native';
+import styles from './styles';
+import InputField from '../../components/InputField';
+// import { Button, Text } from 'native-base';
+import CustomButton from '../../components/CustomButton'
 
 
-// function Login () {
 
-//     return(
-//         <View style={styles.container}> 
-//             <Text> this is Here New Screen</Text>
-//         </View>
-//     )
-// }
-// export default Login;
+function Login() {
 
-import React, { Component } from 'react';
-import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Text } from 'native-base';
-export default class AnatomyExample extends Component {
-  render() {
-    return (
-      <Container>
-        <Header>
-          <Left>
-            <Button transparent>
-              <Icon name='menu' />
-            </Button>
-          </Left>
-          <Body>
-            <Title>Header</Title>
-          </Body>
-          <Right />
-        </Header>
-        <Content>
-          <Text>
-            This is Content Section
-          </Text>
-        </Content>
-        <Footer>
-          <FooterTab>
-            <Button full>
-              <Text>Footer</Text>
-            </Button>
-          </FooterTab>
-        </Footer>
-      </Container>
-    );
-  }
+  return (
+    <View style={styles.container}>
+      <View style={{ width: '90%' }}>
+        <InputField
+          placeholder = "UserName"
+          icon = "person-outline"
+        />
+        <InputField
+          placeholder="Password"
+          icon = "lock-closed-outline"
+        />
+      </View>
+        <CustomButton 
+          text={"Login"}
+          style={styles.customButton}
+          />
+    </View>
+  )
 }
-
+export default Login;
