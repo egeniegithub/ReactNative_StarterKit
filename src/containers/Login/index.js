@@ -6,7 +6,7 @@ import InputField from '../../components/InputField';
 import CustomButton from '../../components/CustomButton'
 
 function onPressLoginButton (navigation) {
-  navigation.navigate('Dashboard')
+  navigation.navigate('Dashboard');
 }
 
 function Login({navigation}) {

@@ -2,14 +2,14 @@ import React from "react";
 import { View, Text } from "react-native";
 import styles from "./styles";
 
-function Dashboard () {
+function Detail () {
     return (
         <View style={styles.container}>
             <Text>
-                Dashboard heree new 
+                Dashboard Detail Screen
             </Text>
         </View>
     )
 }
 
-export default Dashboard;
+export default Detail;
