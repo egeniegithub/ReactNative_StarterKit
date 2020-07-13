@@ -4,8 +4,8 @@ import * as colors from '../../Theme/Color';
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
+        marginTop: 50,
+        alignItems: 'center'
     },
     customButton: {
         backgroundColor: colors.Green,

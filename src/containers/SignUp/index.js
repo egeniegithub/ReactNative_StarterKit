@@ -1,18 +1,18 @@
 import React from 'react';
 import { View } from 'react-native';
-import { Container, Content } from 'native-base';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import styles from './styles';
 import InputField from '../../components/InputField';
 import CustomButton from '../../components/CustomButton';
 import CustomHeader from '../../components/CustomHeader';
 
-function backArrowPress (props) {
+function backArrowPress(props) {
     props.navigation.goBack();
 }
 
 function SignUp(props) {
     return (
-        <View style={{ flex: 1 }}>
+        <KeyboardAwareScrollView>
             <CustomHeader
                 title="Sign Up"
                 leftIcon="arrow-back"
@@ -27,13 +27,10 @@ function SignUp(props) {
                         placeholder="Age"
                     />
                     <InputField
-                        placeholder="Password"
+                        placeholder="Phone No"
                     />
                     <InputField
-                        placeholder="UserName"
-                    />
-                    <InputField
-                        placeholder="Age"
+                        placeholder="City"
                     />
                     <InputField
                         placeholder="Password"
@@ -44,7 +41,7 @@ function SignUp(props) {
                     style={styles.customButton}
                 />
             </View>
-        </View>
+        </KeyboardAwareScrollView>
     )
 }
 
