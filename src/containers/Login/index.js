@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import { View, TouchableOpacity } from 'react-native';
 import { Text } from 'native-base';
 import { connect } from 'react-redux';
@@ -8,16 +8,24 @@ import InputField from '../../components/InputField';
 import CustomButton from '../../components/CustomButton'
 
 
-async function onPressLoginButton(props) {
-  // navigation.navigate('Dashboard');
 
-  let dataRedux = await props.login('hamza3', 'hamza3');
-  console.log('dataRedux  : ', dataRedux);
-
-}
 
 function Login(props) {
+  const [customButtonClick, setCustomButtonClick] = useState(false);
 
+
+
+  async function onPressLoginButton(props) {
+    setCustomButtonClick(true);
+    let data = await props.login('hamza3', 'hamza3');
+    if (data.data.status === 'success') {
+      setCustomButtonClick(false);
+      props.navigation.navigate('Dashboard');
+    }
+    else {
+      setCustomButtonClick(false);
+    }
+  }
   return (
     <View style={styles.container}>
       <View style={{ width: '90%' }}>
@@ -34,6 +42,7 @@ function Login(props) {
         text={"Login"}
         style={styles.customButton}
         onPressLoginButton={() => onPressLoginButton(props)}
+        customButtonClick={customButtonClick}
       />
 
       <View style={styles.signupTextContainer}>
