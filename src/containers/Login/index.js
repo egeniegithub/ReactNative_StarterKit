@@ -13,8 +13,6 @@ import CustomButton from '../../components/CustomButton'
 function Login(props) {
   const [customButtonClick, setCustomButtonClick] = useState(false);
 
-
-
   async function onPressLoginButton(props) {
     setCustomButtonClick(true);
     let data = await props.login('hamza3', 'hamza3');
