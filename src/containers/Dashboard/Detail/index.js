@@ -8,7 +8,7 @@ function onPressMenu(navigation) {
     navigation.toggleDrawer();
 }
 
-function Detail({navigation}) {
+function Detail({ navigation }) {
     return (
         <View style={{ flex: 1 }}>
             <CustomHeader
@@ -18,7 +18,7 @@ function Detail({navigation}) {
             />
             <View style={styles.container}>
                 <Text>
-                    Dashboard Detail Screen
+                    Detail Screen
             </Text>
             </View>
         </View>

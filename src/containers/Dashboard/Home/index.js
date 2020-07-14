@@ -3,11 +3,11 @@ import { View, Text } from "react-native";
 import styles from "./styles";
 import CustomHeader from "../../../components/CustomHeader";
 
-function onPressMenu (navigation) {
+function onPressMenu(navigation) {
     navigation.toggleDrawer();
 }
 
-function Home({navigation}) {
+function Home({ navigation }) {
     return (
         <View style={{ flex: 1 }}>
             <CustomHeader
@@ -17,7 +17,7 @@ function Home({navigation}) {
             />
             <View style={styles.container}>
                 <Text>
-                    Dashboard Home Screen
+                    Home Screen
             </Text>
             </View>
         </View>
