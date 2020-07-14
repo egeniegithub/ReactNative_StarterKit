@@ -13,6 +13,7 @@ import Detail from "../containers/Dashboard/Detail";
 import SignUp from "../containers/SignUp";
 import Profile from "../containers/Profile";
 import Settings from "../containers/Settings";
+import LogOut from "../containers/LogOut";
 
 
 
@@ -58,6 +59,7 @@ function DrawerNavigator() {
             <Drawer.Screen name="Dashboard" component={BottomNavigator} />
             <Drawer.Screen name="Profile" component={Profile} />
             <Drawer.Screen name="Settings" component={Settings} />
+            <Drawer.Screen name="LogOut" component={LogOut} />
         </Drawer.Navigator>
     )
 }

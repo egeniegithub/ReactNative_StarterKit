@@ -1,13 +1,25 @@
 import React from "react";
 import { View, Text } from "react-native";
 import styles from "./styles";
+import CustomHeader from "../../components/CustomHeader";
 
-function Profile () {
+function onPressMenu(navigation) {
+    navigation.toggleDrawer();
+}
+
+function Profile({ navigation }) {
     return (
-        <View style={styles.container}>
-            <Text>
-                Dashboard Profile Screen
+        <View style={{ flex: 1 }}>
+            <CustomHeader
+                title="Profile"
+                leftIcon="menu"
+                onPress={() => onPressMenu(navigation)}
+            />
+            <View style={styles.container}>
+                <Text>
+                    Profile Screen
             </Text>
+            </View>
         </View>
     )
 }
